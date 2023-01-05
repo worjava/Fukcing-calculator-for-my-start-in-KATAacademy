@@ -1,7 +1,13 @@
+import java.util.Scanner;
+
+
+
 public class CalcKulaTop {
+static Scanner sc = new Scanner(System.in);
 
+ static String inpu =sc.nextLine() ;
 
-    public static String calculator(String input) throws Exception {
+    public static String calculator(String inpu) throws Exception {
 
         String R[] = new String[]{"0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI",
                 "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV",
@@ -13,7 +19,7 @@ public class CalcKulaTop {
                 "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII",
                 "XCVIII", "XCIX", "C"};
 
-        String[] s2 = input.split("[/*+-]");
+        String[] s2 = inpu.split("[/*+-]");
 
         int x = 0;
         int y = 0;
@@ -31,29 +37,29 @@ public class CalcKulaTop {
         }
         if(roman1 == true && roman2 == true) {
             int result = 0;
-            if (input.contains("+")) {
+            if (inpu.contains("+")) {
                 result = x + y;
-            } else if (input.contains("-")) {
+            } else if (inpu.contains("-")) {
                 result = x - y;
-            } else if (input.contains("*")) {
+            } else if (inpu.contains("*")) {
                 result = x * y;
             } else {
                 result = x / y;
             }
 
 
-            //конвертация арабский результат в римский
+            //РєРѕРЅРІРµСЂС‚Р°С†РёСЏ Р°СЂР°Р±СЃРєРёР№ СЂРµР·СѓР»СЊС‚Р°С‚ РІ СЂРёРјСЃРєРёР№
             String romanResult = R[result];
             return romanResult;
         }else if(roman1 == false && roman2 == false){
             int result = 0;
             x = Integer.parseInt(s2[0]);
             y = Integer.parseInt(s2[1]);
-            if (input.contains("+")) {
+            if (inpu.contains("+")) {
                 result = x + y;
-            } else if (input.contains("-")) {
+            } else if (inpu.contains("-")) {
                 result = x - y;
-            } else if (input.contains("*")) {
+            } else if (inpu.contains("*")) {
                 result = x * y;
             } else {
                 result = x / y;
@@ -64,14 +70,14 @@ public class CalcKulaTop {
 
 
             if (x > 10 || y > 10) {
-                throw new Exception("Число больше десяти");
+                throw new Exception("Chislo bolshe desyati");
             }
 
             return String.valueOf(result);
 
 
         } else {
-            throw new Exception("Оба числа должны быть в одном формате");
+            throw new Exception("Oba chisla v odnom formate");
         }
 
 
@@ -81,6 +87,9 @@ public class CalcKulaTop {
 
 class Test1 {
     public static void main(String[] args) throws Exception {
-        System.out.println(calculator("I*II"));
+        System.out.println(calculator(inpu));
 
     }
+}
+
+
