@@ -77,7 +77,7 @@ static Scanner sc = new Scanner(System.in);
 
 
         } else {
-            throw new Exception("Oba chisla v odnom formate");
+            throw new Exception("Oba chisla v odnom formate ili operaziu v odny stroky bez brobelov");
         }
 
 
