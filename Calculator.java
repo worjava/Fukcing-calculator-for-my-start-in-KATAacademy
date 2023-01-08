@@ -80,6 +80,7 @@ public class Test25 {
                 y = Integer.parseInt(s2[1]);
             } catch (Exception d) {
                 System.out.println("Введи правильный формат счислений согласно заданнию");
+           throw new Exception("введи еще раз");
             }
 
 
