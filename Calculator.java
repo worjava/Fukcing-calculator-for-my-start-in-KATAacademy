@@ -19,7 +19,7 @@ static Scanner sc = new Scanner(System.in);
                 "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII",
                 "XCVIII", "XCIX", "C"};
 
-        String[] s2 = inpu.split("[/*+-]");
+        String[] s2 = inpu.replaceAll(" ", "").split("[/*+-]");
 
         int x = 0;
         int y = 0;
