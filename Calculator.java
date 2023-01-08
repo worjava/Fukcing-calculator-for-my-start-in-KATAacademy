@@ -20,7 +20,7 @@ static Scanner sc = new Scanner(System.in);
                 "XCVIII", "XCIX", "C"};
 
         String[] s2 = inpu.replaceAll(" ", "").split("[/*+-]");
-
+        if(s2.length>2) throw new Exception("bad format > 2");
         int x = 0;
         int y = 0;
         boolean roman1 = false;
