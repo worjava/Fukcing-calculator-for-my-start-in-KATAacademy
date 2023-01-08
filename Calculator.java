@@ -63,7 +63,7 @@ public class Test25 {
 
             }
             if (result < 0) throw new Exception("в римской системе нет отрицательных чисел");
-            else if (x >10 || y >10) {
+            else if (x > 10 || y > 10) {
                 throw new Exception("Число больше 10");
             }
             String romanResult = R[result];
@@ -73,8 +73,16 @@ public class Test25 {
 
         } else if (roman1 == false && roman2 == false) {
             int result = 0;
-            x = Integer.parseInt(s2[0]);
-            y = Integer.parseInt(s2[1]);
+            boolean good = true;
+
+            try {
+                x = Integer.parseInt(s2[0]);
+                y = Integer.parseInt(s2[1]);
+            } catch (Exception d) {
+                System.out.println("Введи правильный формат счислений согласно заданнию");
+            }
+
+
             if (inpu.contains("+")) {
                 result = x + y;
             } else if (inpu.contains("-")) {
@@ -87,7 +95,7 @@ public class Test25 {
             }
 
 
-            if (x > 10 || y > 10 ) {
+            if (x > 10 || y > 10) {
                 throw new Exception("Chislo bolshe desyati");
             }
 
