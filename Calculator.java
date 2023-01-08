@@ -75,12 +75,8 @@ public class Test25 {
             int result = 0;
             boolean good = true;
 
-            try {
-                x = Integer.parseInt(s2[0]);
-                y = Integer.parseInt(s2[1]);
-            } catch (Exception d) {
-                System.out.println("Введи правильный формат счислений согласно заданнию");
-            }
+            x = Integer.parseInt(s2[0]);
+            y = Integer.parseInt(s2[1]);
 
 
             if (inpu.contains("+")) {
@@ -117,3 +113,4 @@ class Test10 {
 
     }
 }
+
