@@ -1,9 +1,12 @@
+package CALCULATOR;
+
 import java.util.Scanner;
 
+import static CALCULATOR.Test25.calculator;
+import static CALCULATOR.Test25.inpu;
 
-
-public class CalcKulaTop {
- static Scanner sc = new Scanner(System.in);
+public class Test25 {
+    static Scanner sc = new Scanner(System.in);
 
     static String inpu = sc.nextLine();
 
@@ -60,7 +63,9 @@ public class CalcKulaTop {
 
             }
             if (result < 0) throw new Exception("в римской системе нет отрицательных чисел");
-
+            else if (x >10 || y >10) {
+                throw new Exception("Число больше 10");
+            }
             String romanResult = R[result];
 
             return romanResult;
@@ -76,12 +81,13 @@ public class CalcKulaTop {
                 result = x - y;
             } else if (inpu.contains("*")) {
                 result = x * y;
+
             } else {
                 result = x / y;
             }
 
 
-            if (x > 10 || y > 10) {
+            if (x > 10 || y > 10 ) {
                 throw new Exception("Chislo bolshe desyati");
             }
 
@@ -103,4 +109,3 @@ class Test10 {
 
     }
 }
-
