@@ -1,4 +1,4 @@
-public class Test1 {
+
     public class Test25 {
         static Scanner sc = new Scanner(System.in);
 
